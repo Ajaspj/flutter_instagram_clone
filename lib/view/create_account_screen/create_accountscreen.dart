@@ -40,7 +40,7 @@ class CreateAccountScreen extends StatelessWidget {
                 havVBorder: false,
                 text: "Log in",
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => LoginScreen(),
