@@ -1,9 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/main.dart';
 import 'package:flutter_instagram_clone/view/create_account_screen/create_accountscreen.dart';
 import 'package:flutter_instagram_clone/view/homescreen/homescreen.dart';
-import 'package:flutter_instagram_clone/view/homescreen/widgets/custom_story.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});

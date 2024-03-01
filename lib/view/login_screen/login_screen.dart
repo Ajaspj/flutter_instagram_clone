@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/core/constants/color_costants.dart';
 import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
 import 'package:flutter_instagram_clone/global_widgets/global_widgets.dart';
-import 'package:flutter_instagram_clone/main.dart';
 import 'package:flutter_instagram_clone/view/main_screen/bottom_navscreen.dart';
 
 class LoginScreen extends StatelessWidget {

@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/core/constants/color_costants.dart';
 
 class CustomStoryAvatar extends StatelessWidget {
-  const CustomStoryAvatar({super.key});
+  const CustomStoryAvatar({
+    super.key,
+    this.isLive = false,
+    required this.proPic,
+    required this.userName,
+  });
+  final String proPic;
+  final String userName;
+  final bool isLive;
 
   @override
   Widget build(BuildContext context) {
@@ -38,16 +46,36 @@ class CustomStoryAvatar extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  bottom: 0,
-                  child: Container(
-                    child: Text("Live", style: TextStyle(color: Colors.red)),
-                  ))
+                bottom: 0,
+                child: isLive == true
+                    ? Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 2, horizontal: 6),
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                colors: [
+                                  Colors.pink,
+                                  Colors.red,
+                                ]),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                                width: 4, color: ColorConstants.primarWhite)),
+                        child: Center(
+                          child: Text(
+                            "Live",
+                            style: TextStyle(
+                                color: ColorConstants.primarWhite,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      )
+                    : SizedBox(),
+              )
             ],
           ),
-          SizedBox(
-            height: 6,
-          ),
-          Text("user name")
+          SizedBox(height: 3),
+          Text(userName)
         ],
       ),
     );

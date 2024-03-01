@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/core/constants/image_constants.dart';
+import 'package:flutter_instagram_clone/view/dummy_db.dart';
+import 'package:flutter_instagram_clone/view/homescreen/widgets/custom_feed.dart';
 import 'package:flutter_instagram_clone/view/homescreen/widgets/custom_story.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,9 +22,18 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                  children: List.generate(6, (index) => CustomStoryAvatar())))
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(
+                  DummyDb.storyList.length,
+                  (index) => CustomStoryAvatar(
+                        proPic: DummyDb.storyList[index]["proPic"],
+                        userName: DummyDb.storyList[index]["userName"],
+                        isLive: DummyDb.storyList[index]["isLive"],
+                      )),
+            ),
+          ),
+          CustomFeed()
         ],
       ),
     );
