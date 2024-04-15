@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/view/create_account_screen/create_accountscreen.dart';
 import 'package:flutter_instagram_clone/view/homescreen/homescreen.dart';
+import 'package:flutter_instagram_clone/view/notification_screen/notification_screen.dart';
+import 'package:flutter_instagram_clone/view/profile_screen/profile_screen.dart';
+import 'package:flutter_instagram_clone/view/search_screen/search_screen.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -12,18 +15,12 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screesList = [
     HomeScreen(),
-    Container(
-      color: Colors.yellow,
-    ),
+    SearchScreen(),
     Container(
       color: Colors.white,
     ),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.green,
-    ),
+    Notification_Screen(),
+    InstagramProfilePage()
   ];
 
   int selectedIndex = 0;

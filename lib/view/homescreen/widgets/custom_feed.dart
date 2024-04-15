@@ -85,7 +85,7 @@ class _CustomFeedState extends State<CustomFeed> {
                 ),
               )
             ],
-          )
+          ),
         ],
       ),
     );

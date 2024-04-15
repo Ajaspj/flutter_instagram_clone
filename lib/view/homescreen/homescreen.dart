@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         title: Image.asset(
           ImageConstants.instaLogoPng,
           scale: 1.5,
+          alignment: Alignment.centerLeft,
         ),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.live_tv))],
       ),
